@@ -1,0 +1,249 @@
+website/
+│
+├── index.html
+├── style.css
+│
+└── images/
+    ├── logo-44rezeki.png
+    └── background-44rezeki.png
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>44 REZEKI</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- LOGO ATAS -->
+    <header class="header">
+        <img
+            src="images/logo-44rezeki.png"
+            alt="44 REZEKI"
+            class="main-logo"
+        >
+    </header>
+
+
+    <!-- BACKGROUND TENGAH -->
+    <main class="hero">
+
+        <div class="hero-overlay">
+
+            <div class="buttons">
+
+                <a href="#" class="btn">
+                    LOGIN
+                </a>
+
+                <a href="#" class="btn">
+                    DAFTAR VVIP
+                </a>
+
+                <a href="#" class="btn btn-alt">
+                    LINK ALTERNATIF
+                </a>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <footer>
+        © 2026 44 REZEKI
+    </footer>
+
+</body>
+</html>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #001c08;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================
+   LOGO ATAS
+========================= */
+
+.header {
+    width: 100%;
+    padding: 18px 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            180deg,
+            #003b12,
+            #001d08
+        );
+}
+
+.main-logo {
+    width: 180px;
+    max-width: 45%;
+    height: auto;
+
+    filter: drop-shadow(
+        0 5px 15px rgba(255, 196, 0, 0.45)
+    );
+}
+
+
+/* =========================
+   BACKGROUND TENGAH
+========================= */
+
+.hero {
+    position: relative;
+
+    width: 100%;
+    min-height: 850px;
+
+    background-image:
+        url("images/background-44rezeki.png");
+
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* OPTIONAL OVERLAY */
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    padding-bottom: 70px;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.buttons {
+    width: 90%;
+    max-width: 430px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.btn {
+    display: block;
+
+    padding: 16px;
+
+    text-align: center;
+    text-decoration: none;
+
+    font-size: 20px;
+    font-weight: 900;
+
+    color: #ffffff;
+
+    border: 2px solid #ffd95a;
+    border-radius: 50px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #16a83b,
+            #006519
+        );
+
+    box-shadow:
+        0 4px 12px rgba(0,0,0,.5),
+        0 0 15px rgba(255,211,56,.45);
+}
+
+.btn:hover {
+    transform: scale(1.03);
+
+    background:
+        linear-gradient(
+            180deg,
+            #22c64a,
+            #087925
+        );
+}
+
+.btn-alt {
+    background:
+        linear-gradient(
+            180deg,
+            #ffd859,
+            #b77900
+        );
+
+    color: #103b12;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 18px;
+
+    text-align: center;
+
+    color: #d6b64b;
+    background: #001306;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .header {
+        padding: 12px;
+    }
+
+    .main-logo {
+        width: 135px;
+    }
+
+    .hero {
+        min-height: 720px;
+
+        background-size: cover;
+        background-position: center top;
+    }
+
+    .buttons {
+        width: 88%;
+    }
+
+    .btn {
+        font-size: 17px;
+        padding: 14px;
+    }
+}
